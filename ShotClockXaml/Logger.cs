@@ -1,35 +1,72 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Security;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.IO;
 
 namespace ShotclockXaml
 {
 
     class Logger
     {
-        private StreamWriter m_Writer;
+        // Ensure event source is created:
+        // On elevated prompt: New-EventLog -logname Application -Source <sourcename>
+        private string m_Source;
         
-        public Logger(string logFile)
+        public class Type
         {
-            m_Writer = File.AppendText(logFile);
+            public  const int InitFailure = 1;
+            public  const int RetrieveFailure = 2;
         }
+
+        public struct LogEntry
+        {
+            public string Message;
+            public int EventId;
+
+            public LogEntry(string aMessage, int aEventId)
+            {
+                Message = aMessage;
+                EventId = aEventId;
+            }
+        }
+
+        private Dictionary<LogEntry, DateTime> m_LogEntries = new Dictionary<LogEntry, DateTime>();
 
     
-        ~Logger()
+
+        public Logger(string Source)
         {
-            m_Writer.Close();
+            m_Source = Source;
         }
 
-        public  void Log(string logMessage)
+
+        ~Logger()
         {
-            m_Writer.Write("\r\nLog Entry : ");
-            m_Writer.Write("{0} {1}", DateTime.Now.ToLongTimeString(),
-                DateTime.Now.ToLongDateString());
-            m_Writer.WriteLine("  :");
-            m_Writer.WriteLine("  :{0}", logMessage);
-            m_Writer.WriteLine ("-------------------------------");
+            // Do nothing
+        }
+
+        public void Log(string logMessage, EventLogEntryType type, int eventID )
+        {
+            LogEntry entry = new LogEntry(logMessage, eventID);
+
+            if (m_LogEntries.ContainsKey(entry))
+            {
+                if (DateTime.Now < (m_LogEntries[entry]).AddMinutes(1))
+                {
+                    // Already logged in the last minute
+                    return;
+                }
+            }
+
+            try
+            {
+                EventLog.WriteEntry(m_Source, logMessage, type, eventID);
+                m_LogEntries[entry] = DateTime.Now;
+            }
+            catch(SecurityException)
+            {
+                // Cannot log, just return
+            }
         }
 
     }
