@@ -20,6 +20,9 @@ using System.Data;
 using System.Net;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Json;
+using System.Configuration;
+using System.IO;
+using System.Reflection;
 
 using System.Diagnostics;
 
@@ -51,11 +54,29 @@ namespace ShotclockXaml
 		//This does not have to be a http request, this can be from c: 
 		public MainControl()
 		{
+        
 			this.InitializeComponent();
+
+            long time = 50;
+            try
+            {
+                ExeConfigurationFileMap configMap = new ExeConfigurationFileMap();
+                configMap.ExeConfigFilename = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\shotclock.config";
+                Configuration configuration = ConfigurationManager.OpenMappedExeConfiguration(configMap, ConfigurationUserLevel.None);
+                AppSettingsSection appSettings = configuration.AppSettings;
+
+                URL.Text = appSettings.Settings["URL"].Value;
+                time = Int64.Parse(appSettings.Settings["refreshTime"].Value);
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine("Error loading config:" + e.Message);
+            }
+
 			//create a new thread
 
             m_url = URL.Text;
-            m_timer = new System.Timers.Timer(50);
+            m_timer = new System.Timers.Timer(time);
 
             m_timer.Elapsed += ThreadProc;
             m_timer.Enabled = true;
