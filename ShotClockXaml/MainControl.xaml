@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="ShotclockXaml.MainControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Width="200" Height="200" xmlns:my="clr-namespace:vMixTitleLibrary;assembly=vMixTitleLibrary" Background="#FFF31010">
+    <Grid x:Name="grid" RenderTransformOrigin="0.5,0.5">
+    	<Grid.RenderTransform>
+    		<TransformGroup>
+    			<ScaleTransform/>
+    			<SkewTransform/>
+    			<RotateTransform/>
+    			<TranslateTransform/>
+    		</TransformGroup>
+    	</Grid.RenderTransform>
+        <my:TextBlockDesign HorizontalAlignment="Left" Name="Shotclock" VerticalAlignment="Center" Width="200" Fill="White" FontSize="90" FontWeight="Bold" Text="99" Stroke="White" StrokeThickness="0" FontFamily="Century Gothic" Height="110.346" Highlight="False" TextAlignment="Center" Margin="0,44.827" />
+        <my:TextBlockDesign Name="URL" HorizontalAlignment="Left" Height="23" Margin="23.881,177,0,0" Text="http://192.168.2.149/shotclock/time" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+    </Grid>
+
+</UserControl>
