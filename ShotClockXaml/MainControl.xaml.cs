@@ -11,8 +11,8 @@ namespace ShotclockXaml
 	public partial class MainControl
 	{
 
-        private string m_url;
-        private long m_attentionTime = 5;
+        private string theUrl;
+        private long theAttentionTime = 5;
 
         private ShotclockRetriever theRetriever;
 
@@ -30,9 +30,9 @@ namespace ShotclockXaml
             {
                 Configuration myConfig = new Configuration(configFileName);
 
-                m_url = myConfig["URL"];
+                theUrl = myConfig["URL"];
                 time = Int64.Parse(myConfig["refreshTime"]);
-                m_attentionTime = Int64.Parse(myConfig["attentionTime"]);
+                theAttentionTime = Int64.Parse(myConfig["attentionTime"]);
             }
             catch(Exception e)
             {
@@ -41,9 +41,9 @@ namespace ShotclockXaml
 
 
 			//create a new thread
-            theRetriever = new ShotclockRetriever(this.Dispatcher, Update, time, m_url);
+            theRetriever = new ShotclockRetriever(this.Dispatcher, Update, time, theUrl);
 
-            URL.Text = m_url;
+            URL.Text = theUrl;
 
 
         }		
@@ -54,7 +54,7 @@ namespace ShotclockXaml
             if ( aResponse != null && aResponse.Status == "OK" )
             {
                 Shotclock.Text = String.Format("{0:00}", aResponse.Time);
-                if (aResponse.Time <= m_attentionTime)
+                if (aResponse.Time <= theAttentionTime)
                 {
                     Shotclock.Fill = new SolidColorBrush(Colors.Yellow);
                 }
@@ -68,7 +68,7 @@ namespace ShotclockXaml
                 Shotclock.Text = "-";
             }
 
-            m_url = URL.Text;
+            theUrl = URL.Text;
 
 		
 		}
