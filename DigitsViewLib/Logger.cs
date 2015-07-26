@@ -3,14 +3,16 @@ using System.Diagnostics;
 using System.Security;
 using System.Collections.Generic;
 
-namespace ShotclockXaml
+namespace DigitsViewLib
 {
 
-    class Logger
+    public static class Logger
     {
         // Ensure event source is created:
         // On elevated prompt: New-EventLog -logname Application -Source <sourcename>
-        private string m_Source;
+
+        [System.ComponentModel.DefaultValue("Unknown")]
+        public static string Source  { set; get; }
         
         public class Type
         {
@@ -30,22 +32,9 @@ namespace ShotclockXaml
             }
         }
 
-        private Dictionary<LogEntry, DateTime> m_LogEntries = new Dictionary<LogEntry, DateTime>();
+        private static Dictionary<LogEntry, DateTime> m_LogEntries = new Dictionary<LogEntry, DateTime>();
 
-    
-
-        public Logger(string Source)
-        {
-            m_Source = Source;
-        }
-
-
-        ~Logger()
-        {
-            // Do nothing
-        }
-
-        public void Log(string logMessage, EventLogEntryType type, int eventID )
+        public static void Log(string logMessage, EventLogEntryType type, int eventID )
         {
             LogEntry entry = new LogEntry(logMessage, eventID);
 
@@ -60,7 +49,7 @@ namespace ShotclockXaml
 
             try
             {
-                EventLog.WriteEntry(m_Source, logMessage, type, eventID);
+                EventLog.WriteEntry(Source, logMessage, type, eventID);
                 m_LogEntries[entry] = DateTime.Now;
             }
             catch(SecurityException)
