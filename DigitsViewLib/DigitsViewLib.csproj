@@ -51,8 +51,12 @@
     <Compile Include="Configuration.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScoreboardResponse.cs" />
+    <Compile Include="ScoreboardRetriever.cs" />
     <Compile Include="ShotclockResponse.cs" />
     <Compile Include="ShotclockRetriever.cs" />
+    <Compile Include="Timeclockresponse.cs" />
+    <Compile Include="TimeclockRetreiver.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="GACDigitsViewKey.snk" />
