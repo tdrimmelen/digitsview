@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ExpressionBlendVersion>4.0.20525.0</ExpressionBlendVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{D64FCEC2-4E9E-4F4E-AF87-1965B8F0AE46}</ProjectGuid>
+    <ProjectGuid>{F5FDFA2C-F0E9-4175-982A-A2AD23E3B289}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ShotclockXaml</RootNamespace>
-    <AssemblyName>ShotclockXaml</AssemblyName>
+    <RootNamespace>Scoreboardv2Xaml</RootNamespace>
+    <AssemblyName>Scoreboardv2Xaml</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -67,10 +67,6 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="MainControl.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Compile Include="MainControl.xaml.cs">
       <DependentUpon>MainControl.xaml</DependentUpon>
     </Compile>
@@ -80,15 +76,19 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="shotclock.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\DigitsViewLib\DigitsViewLib.csproj">
       <Project>{a63243c6-3efa-4ebb-ae7a-f900da0cd667}</Project>
       <Name>DigitsViewLib</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scoreboard.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="MainControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath32)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

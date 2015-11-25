@@ -1,10 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShotclockXaml", "ShotClockXaml\ShotclockXaml.csproj", "{D64FCEC2-4E9E-4F4E-AF87-1965B8F0AE46}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitsViewLib", "DigitsViewLib\DigitsViewLib.csproj", "{A63243C6-3EFA-4EBB-AE7A-F900DA0CD667}"
 EndProject
 Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "Install", "Install\Install.isproj", "{C2F3052D-9983-4995-83C5-F823A7FF38C7}"
@@ -12,7 +10,7 @@ Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "Install", "Install\Install.
 		{F5FDFA2C-F0E9-4175-982A-A2AD23E3B289} = {F5FDFA2C-F0E9-4175-982A-A2AD23E3B289}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScoreboardXaml", "ScoreBoardXaml\ScoreboardXaml.csproj", "{F5FDFA2C-F0E9-4175-982A-A2AD23E3B289}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScoreboardXaml", "ScoreBoardv2Xaml\ScoreboardXaml.csproj", "{F5FDFA2C-F0E9-4175-982A-A2AD23E3B289}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,26 +26,6 @@ Global
 		SingleImage|x64 = SingleImage|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D64FCEC2-4E9E-4F4E-AF87-1965B8F0AE46}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
-		{D64FCEC2-4E9E-4F4E-AF87-1965B8F0AE46}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
-		{D64FCEC2-4E9E-4F4E-AF87-1965B8F0AE46}.CD_ROM|x64.ActiveCfg = Release|x64
-		{D64FCEC2-4E9E-4F4E-AF87-1965B8F0AE46}.CD_ROM|x64.Build.0 = Release|x64
-		{D64FCEC2-4E9E-4F4E-AF87-1965B8F0AE46}.Debug|Any CPU.ActiveCfg = Release|Any CPU
-		{D64FCEC2-4E9E-4F4E-AF87-1965B8F0AE46}.Debug|Any CPU.Build.0 = Release|Any CPU
-		{D64FCEC2-4E9E-4F4E-AF87-1965B8F0AE46}.Debug|x64.ActiveCfg = Debug|x64
-		{D64FCEC2-4E9E-4F4E-AF87-1965B8F0AE46}.Debug|x64.Build.0 = Debug|x64
-		{D64FCEC2-4E9E-4F4E-AF87-1965B8F0AE46}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
-		{D64FCEC2-4E9E-4F4E-AF87-1965B8F0AE46}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
-		{D64FCEC2-4E9E-4F4E-AF87-1965B8F0AE46}.DVD-5|x64.ActiveCfg = Debug|x64
-		{D64FCEC2-4E9E-4F4E-AF87-1965B8F0AE46}.DVD-5|x64.Build.0 = Debug|x64
-		{D64FCEC2-4E9E-4F4E-AF87-1965B8F0AE46}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D64FCEC2-4E9E-4F4E-AF87-1965B8F0AE46}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D64FCEC2-4E9E-4F4E-AF87-1965B8F0AE46}.Release|x64.ActiveCfg = Release|x64
-		{D64FCEC2-4E9E-4F4E-AF87-1965B8F0AE46}.Release|x64.Build.0 = Release|x64
-		{D64FCEC2-4E9E-4F4E-AF87-1965B8F0AE46}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
-		{D64FCEC2-4E9E-4F4E-AF87-1965B8F0AE46}.SingleImage|Any CPU.Build.0 = Release|Any CPU
-		{D64FCEC2-4E9E-4F4E-AF87-1965B8F0AE46}.SingleImage|x64.ActiveCfg = Release|x64
-		{D64FCEC2-4E9E-4F4E-AF87-1965B8F0AE46}.SingleImage|x64.Build.0 = Release|x64
 		{A63243C6-3EFA-4EBB-AE7A-F900DA0CD667}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
 		{A63243C6-3EFA-4EBB-AE7A-F900DA0CD667}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
 		{A63243C6-3EFA-4EBB-AE7A-F900DA0CD667}.CD_ROM|x64.ActiveCfg = Release|Any CPU
@@ -87,8 +65,8 @@ Global
 		{F5FDFA2C-F0E9-4175-982A-A2AD23E3B289}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
 		{F5FDFA2C-F0E9-4175-982A-A2AD23E3B289}.CD_ROM|x64.ActiveCfg = Release|x64
 		{F5FDFA2C-F0E9-4175-982A-A2AD23E3B289}.CD_ROM|x64.Build.0 = Release|x64
-		{F5FDFA2C-F0E9-4175-982A-A2AD23E3B289}.Debug|Any CPU.ActiveCfg = Release|Any CPU
-		{F5FDFA2C-F0E9-4175-982A-A2AD23E3B289}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{F5FDFA2C-F0E9-4175-982A-A2AD23E3B289}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5FDFA2C-F0E9-4175-982A-A2AD23E3B289}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5FDFA2C-F0E9-4175-982A-A2AD23E3B289}.Debug|x64.ActiveCfg = Debug|x64
 		{F5FDFA2C-F0E9-4175-982A-A2AD23E3B289}.Debug|x64.Build.0 = Debug|x64
 		{F5FDFA2C-F0E9-4175-982A-A2AD23E3B289}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU

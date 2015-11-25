@@ -6,16 +6,19 @@ using System.Diagnostics;
 
 using DigitsViewLib;
 
-namespace ScoreboardXaml
+namespace ScoreboardV2Xaml
 {
 	public partial class MainControl
 	{
 
         private string theScoreboardUrl;
         private string theTimeclockUrl;
+        private string theShotclockUrl;
+        private long theAttentionTime = 5;
 
         private ScoreboardRetriever theScoreboardRetriever;
         private TimeclockRetriever theTimeclockRetriever;
+        private ShotclockRetriever theShotclockRetriever;
 
         public MainControl()
 		{
@@ -33,7 +36,9 @@ namespace ScoreboardXaml
 
                 theScoreboardUrl = myConfig["ScoreboardURL"];
                 theTimeclockUrl = myConfig["TimeclockURL"];
+                theShotclockUrl = myConfig["ShotclockURL"];
                 time = Int64.Parse(myConfig["refreshTime"]);
+                theAttentionTime = Int64.Parse(myConfig["attentionTime"]);
             }
             catch(Exception e)
             {
@@ -42,6 +47,7 @@ namespace ScoreboardXaml
 
             theScoreboardRetriever = new ScoreboardRetriever(this.Dispatcher, ScoreboardUpdate, time, theScoreboardUrl);
             theTimeclockRetriever = new TimeclockRetriever(this.Dispatcher, TimeclockUpdate, time, theTimeclockUrl);
+            theShotclockRetriever = new ShotclockRetriever(this.Dispatcher, ShotclockUpdate, time, theShotclockUrl);
 
         }		
 
@@ -50,13 +56,13 @@ namespace ScoreboardXaml
 
             if ( aResponse != null && aResponse.Status == "OK" )
             {
-                Home.Text = String.Format("{0}", aResponse.Home);
-                Guest.Text = String.Format("{0}", aResponse.Guest);
+                HOMESCORE.Text = String.Format("{0}", aResponse.Home);
+                GUESTSCORE.Text = String.Format("{0}", aResponse.Guest);
             }
             else 
             {
-                Home.Text = "-";
-                Guest.Text = "-";
+                HOMESCORE.Text = "-";
+                GUESTSCORE.Text = "-";
             }		
 		}
 
@@ -65,11 +71,31 @@ namespace ScoreboardXaml
 
             if (aResponse != null && aResponse.Status == "OK")
             {
-                Timeclock.Text = String.Format("{0}", aResponse.Minute) + ":" + String.Format("{0:00}", aResponse.Second);
+                TIME.Text = String.Format("{0}", aResponse.Minute) + ":" + String.Format("{0:00}", aResponse.Second);
             }
             else
             {
-                Timeclock.Text = "-";
+                TIME.Text = "-";
+            }
+        }
+        private void ShotclockUpdate(ShotclockResponse aResponse)
+        {
+
+            if (aResponse != null && aResponse.Status == "OK")
+            {
+                SHOTCLOCK.Text = String.Format("{0:00}", aResponse.Time);
+                if (aResponse.Time <= theAttentionTime)
+                {
+                    SHOTCLOCK.Fill = new SolidColorBrush(Colors.Yellow);
+                }
+                else
+                {
+                    SHOTCLOCK.Fill = new SolidColorBrush(Colors.White);
+                }
+            }
+            else
+            {
+                SHOTCLOCK.Text = "-";
             }
         }
     }
