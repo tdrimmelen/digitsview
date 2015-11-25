@@ -344,7 +344,6 @@
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{7DA72515-3973-46F0-A53C-B81875B88DF2}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{7F915D07-9F64-44CF-868F-6FC6C38D1050}</td><td>GlobalAssemblyCache</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ScoreboardXaml.Primary_output</td><td>{16F94ECB-AD3C-4DD0-AE85-D4DDD0CA07D7}</td><td>INSTALLDIR</td><td>2</td><td/><td>scoreboardxaml.primary_outpu</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ShotclockXaml.Primary_output2</td><td>{DD73010B-77B3-422B-A719-2EEDBA776BC7}</td><td>INSTALLDIR</td><td>2</td><td/><td>shotclockxaml.primary_output2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
 	<table name="Condition">
@@ -1069,6 +1068,7 @@
 		<row><td>ISSelfRegisterCosting</td><td>1</td><td>ISSELFREG.DLL</td><td>ISSelfRegisterCosting</td><td/><td/></row>
 		<row><td>ISSelfRegisterFiles</td><td>3073</td><td>ISSELFREG.DLL</td><td>ISSelfRegisterFiles</td><td/><td/></row>
 		<row><td>ISSelfRegisterFinalize</td><td>1</td><td>ISSELFREG.DLL</td><td>ISSelfRegisterFinalize</td><td/><td/></row>
+		<row><td>ISSetAllUsers</td><td>257</td><td>SetAllUsers.dll</td><td>SetAllUsers</td><td/><td/></row>
 		<row><td>ISUnSelfRegisterFiles</td><td>3073</td><td>ISSELFREG.DLL</td><td>ISUnSelfRegisterFiles</td><td/><td/></row>
 		<row><td>SetARPINSTALLLOCATION</td><td>51</td><td>ARPINSTALLLOCATION</td><td>[INSTALLDIR]</td><td/><td/></row>
 		<row><td>SetAllUsersProfileNT</td><td>51</td><td>ALLUSERSPROFILE</td><td>[%SystemRoot]\Profiles\All Users</td><td/><td/></row>
@@ -1868,7 +1868,6 @@
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT1</td></row>
 		<row><td>AlwaysInstall</td><td>ScoreboardXaml.Primary_output</td></row>
-		<row><td>AlwaysInstall</td><td>ShotclockXaml.Primary_output2</td></row>
 	</table>
 
 	<table name="File">
@@ -1886,8 +1885,6 @@
 		<row><td>digitsviewlib.primary_output1</td><td>DigitsViewLib.Primary_output1</td><td>DigitsViewLib.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;DigitsViewLib&gt;|Built</td><td>3</td><td/></row>
 		<row><td>scoreboard.config</td><td>ISX_DEFAULTCOMPONENT</td><td>SCOREB~1.CON|Scoreboard.config</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Visual Studio Projects\DigitsView\ScoreBoardXaml\Scoreboard.config</td><td>1</td><td/></row>
 		<row><td>scoreboardxaml.primary_outpu</td><td>ScoreboardXaml.Primary_output</td><td>ScoreboardXaml.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ScoreboardXaml&gt;|Built</td><td>3</td><td/></row>
-		<row><td>shotclock.config</td><td>ISX_DEFAULTCOMPONENT</td><td>SHOTCL~1.CON|shotclock.config</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Visual Studio Projects\DigitsView\ShotClockXaml\shotclock.config</td><td>1</td><td/></row>
-		<row><td>shotclockxaml.primary_output2</td><td>ShotclockXaml.Primary_output2</td><td>ShotclockXaml.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ShotclockXaml&gt;|Built</td><td>3</td><td/></row>
 	</table>
 
 	<table name="FileSFPCatalog">
@@ -2035,7 +2032,6 @@
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_8E42F046_4AD2_4989_817A_E846D773F8BF_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_917A3244_E519_4CA6_A63B_871E411B0954_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ScoreboardXaml.Primary_output</td><td/><td/><td>_84406FFC_B930_4E42_A760_36D5015D1FF6_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ShotclockXaml.Primary_output2</td><td/><td/><td>_72248E6E_597A_4735_A48E_6C34C76C5A06_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="ISCustomActionReference">
@@ -3913,6 +3909,7 @@
 		<row><td>ISSelfRegisterCosting</td><td/><td>2201</td><td/><td/></row>
 		<row><td>ISSelfRegisterFiles</td><td/><td>5601</td><td/><td/></row>
 		<row><td>ISSelfRegisterFinalize</td><td/><td>6601</td><td/><td/></row>
+		<row><td>ISSetAllUsers</td><td>Not Installed</td><td>10</td><td/><td/></row>
 		<row><td>ISUnSelfRegisterFiles</td><td/><td>2202</td><td/><td/></row>
 		<row><td>InstallFiles</td><td/><td>4000</td><td>InstallFiles</td><td/></row>
 		<row><td>InstallFinalize</td><td/><td>6600</td><td>InstallFinalize</td><td/></row>
@@ -4030,6 +4027,7 @@ RABWAEQALQA1AAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>FileCost</td><td/><td>900</td><td>FileCost</td><td/></row>
 		<row><td>FindRelatedProducts</td><td/><td>430</td><td>FindRelatedProducts</td><td/></row>
 		<row><td>ISPreventDowngrade</td><td>ISFOUNDNEWERPRODUCTVERSION</td><td>450</td><td>ISPreventDowngrade</td><td/></row>
+		<row><td>ISSetAllUsers</td><td>Not Installed</td><td>10</td><td/><td/></row>
 		<row><td>InstallWelcome</td><td>Not Installed</td><td>1210</td><td>InstallWelcome</td><td/></row>
 		<row><td>IsolateComponents</td><td/><td>950</td><td>IsolateComponents</td><td/></row>
 		<row><td>LaunchConditions</td><td>Not Installed</td><td>410</td><td>LaunchConditions</td><td/></row>
@@ -4376,7 +4374,7 @@ RABWAEQALQA1AAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>ProductCode</td><td>{228062B3-AE0D-4020-8F60-7AD385FA7AF3}</td><td/></row>
 		<row><td>ProductName</td><td>DigitsView</td><td/></row>
-		<row><td>ProductVersion</td><td>1.00.0000</td><td/></row>
+		<row><td>ProductVersion</td><td>1.10.0000</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>
@@ -4444,6 +4442,7 @@ RABWAEQALQA1AAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S0">Value</col>
 		<col def="s72">Component_</col>
 		<col def="I4">ISAttributes</col>
+		<row><td>Registry1</td><td>2</td><td>SYSTEM\CurrentControlSet\Services\EventLog\Application\Shotclock</td><td>-</td><td/><td>ISX_DEFAULTCOMPONENT</td><td>0</td></row>
 		<row><td>Registry10</td><td>2</td><td>SYSTEM\CurrentControlSet\Services\EventLog\Application\Scoreboard</td><td/><td/><td>ISX_DEFAULTCOMPONENT</td><td>0</td></row>
 		<row><td>Registry11</td><td>2</td><td>SYSTEM\CurrentControlSet\Services\EventLog\Application\Scoreboard</td><td>EventMessageFile</td><td>#%C:\Windows\Microsoft.NET\Framework64\v4.0.30319\EventLogMessages.dll</td><td>ISX_DEFAULTCOMPONENT</td><td>0</td></row>
 		<row><td>Registry6</td><td>2</td><td>SYSTEM\SYSTEM\CurrentControlSet\Services\EventLog\Application\Shotclock</td><td/><td/><td>ISX_DEFAULTCOMPONENT</td><td>0</td></row>

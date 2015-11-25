@@ -37,9 +37,5 @@
 			<Name>ScoreboardXaml</Name>
 			<Project>{F5FDFA2C-F0E9-4175-982A-A2AD23E3B289}</Project>
 		</ProjectReference>
-		<ProjectReference Include="..\ShotClockXaml\ShotclockXaml.csproj">
-			<Name>ShotclockXaml</Name>
-			<Project>{D64FCEC2-4E9E-4F4E-AF87-1965B8F0AE46}</Project>
-		</ProjectReference>
 	</ItemGroup>
 </Project>
