@@ -1884,6 +1884,7 @@
 		<col def="S72">ISComponentSubFolder_</col>
 		<row><td>digitsviewlib.primary_output1</td><td>DigitsViewLib.Primary_output1</td><td>DigitsViewLib.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;DigitsViewLib&gt;|Built</td><td>3</td><td/></row>
 		<row><td>scoreboard.config</td><td>ISX_DEFAULTCOMPONENT</td><td>SCOREB~1.CON|Scoreboard.config</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Visual Studio Projects\DigitsView\ScoreBoardXaml\Scoreboard.config</td><td>1</td><td/></row>
+		<row><td>scoreboard15.png</td><td>ISX_DEFAULTCOMPONENT</td><td>SCOREB~1.PNG|Scoreboard15.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Visual Studio Projects\DigitsView\ScoreBoardXaml\Scoreboard15.png</td><td>1</td><td/></row>
 		<row><td>scoreboardxaml.primary_outpu</td><td>ScoreboardXaml.Primary_output</td><td>ScoreboardXaml.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ScoreboardXaml&gt;|Built</td><td>3</td><td/></row>
 	</table>
 
@@ -3997,7 +3998,7 @@ RABWAEQALQA1AAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ISTheme</td><td>InstallShield Blue.theme</td></row>
 		<row><td>ISUSLock</td><td>{726420A4-9DEE-40D2-9EAE-6B3E6BF9E2D4}</td></row>
 		<row><td>ISUSSignature</td><td>{90FCA7A8-2E6F-4357-92DA-B226027BA616}</td></row>
-		<row><td>ISVisitedViews</td><td>viewAssistant,viewISToday,viewRealSetupDesign,viewUpgradePaths,viewObjects,viewDependencies,viewUI,viewTextMessages,viewSystemSearch,viewCustomActions,viewRelease,viewDesignPatches,viewRegistry,viewInstallScriptStd,viewSetupDesign,viewAppFiles</td></row>
+		<row><td>ISVisitedViews</td><td>viewAssistant,viewISToday,viewRealSetupDesign,viewUpgradePaths,viewObjects,viewDependencies,viewUI,viewTextMessages,viewSystemSearch,viewCustomActions,viewRelease,viewDesignPatches,viewRegistry,viewInstallScriptStd,viewSetupDesign,viewAppFiles,viewUpdateService</td></row>
 		<row><td>Limited</td><td>1</td></row>
 		<row><td>LockPermissionMode</td><td>1</td></row>
 		<row><td>MsiExecCmdLineOptions</td><td/></row>
@@ -4374,7 +4375,7 @@ RABWAEQALQA1AAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>ProductCode</td><td>{228062B3-AE0D-4020-8F60-7AD385FA7AF3}</td><td/></row>
 		<row><td>ProductName</td><td>DigitsView</td><td/></row>
-		<row><td>ProductVersion</td><td>1.10.0000</td><td/></row>
+		<row><td>ProductVersion</td><td>1.03.0000</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>
@@ -4386,7 +4387,7 @@ RABWAEQALQA1AAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>RestartManagerOption</td><td>CloseRestart</td><td/></row>
 		<row><td>SERIALNUMBER</td><td/><td/></row>
 		<row><td>SERIALNUMVALSUCCESSRETVAL</td><td>1</td><td/></row>
-		<row><td>SecureCustomProperties</td><td>ISFOUNDNEWERPRODUCTVERSION;USERNAME;COMPANYNAME;ISX_SERIALNUM;SUPPORTDIR;DOTNETVERSION35SP1</td><td/></row>
+		<row><td>SecureCustomProperties</td><td>ISFOUNDNEWERPRODUCTVERSION;USERNAME;COMPANYNAME;ISX_SERIALNUM;SUPPORTDIR;DOTNETVERSION35SP1;ISACTIONPROP1</td><td/></row>
 		<row><td>SelectedSetupType</td><td>##IDS__DisplayName_Typical##</td><td/></row>
 		<row><td>SetupType</td><td>Typical</td><td/></row>
 		<row><td>UpgradeCode</td><td>{2BCC3C50-501E-4B56-BB0B-9EFFADA03FD8}</td><td/></row>
@@ -4664,6 +4665,7 @@ RABWAEQALQA1AAEARQB4AHAAcgBlAHMAcwA=
 		<col def="s72">ActionProperty</col>
 		<col def="S72">ISDisplayName</col>
 		<row><td>{00000000-0000-0000-0000-000000000000}</td><td>***ALL_VERSIONS***</td><td></td><td></td><td>2</td><td/><td>ISFOUNDNEWERPRODUCTVERSION</td><td>ISPreventDowngrade</td></row>
+		<row><td>{2BCC3C50-501E-4B56-BB0B-9EFFADA03FD8}</td><td>1.10.0000</td><td>1.10.0000</td><td>1033</td><td>768</td><td/><td>ISACTIONPROP1</td><td>UpgradeFromVersion1.10</td></row>
 	</table>
 
 	<table name="Verb">
