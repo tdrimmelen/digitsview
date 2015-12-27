@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 using System.Reflection;
 using System.Diagnostics;
 
@@ -29,7 +31,12 @@ namespace ScoreboardV2Xaml
 
             Logger.Source = "Scoreboard";
 
-            string configFileName = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\Scoreboard.config";
+            string baseFolder = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+
+            string configFileName = baseFolder + "\\Scoreboard.config";
+            string backgroundImageFile = "";
+            string zeroSubstitutionImageFile = "";
+
             try
             {
                 Configuration myConfig = new Configuration(configFileName);
@@ -39,6 +46,8 @@ namespace ScoreboardV2Xaml
                 theShotclockUrl = myConfig["ShotclockURL"];
                 time = Int64.Parse(myConfig["refreshTime"]);
                 theAttentionTime = Int64.Parse(myConfig["attentionTime"]);
+                backgroundImageFile = myConfig["backgroundImageFile"];
+                zeroSubstitutionImageFile = myConfig["zeroSubstitutionImageFile"];
             }
             catch(Exception e)
             {
@@ -60,7 +69,36 @@ namespace ScoreboardV2Xaml
                 theShotclockRetriever = new ShotclockRetriever(this.Dispatcher, ShotclockUpdate, time, theShotclockUrl);
             }
 
-        }		
+            if (backgroundImageFile == "")
+            {
+                backgroundImageFile = baseFolder + @"/Images/scoreboard.png";
+            }
+
+            if (zeroSubstitutionImageFile == "")
+            {
+                zeroSubstitutionImageFile = baseFolder + @"/Images/s0.png";
+            }
+
+            // Initialise source
+            InitImageSource(BGIMG, backgroundImageFile );
+            InitImageSource(HOME_SUBSTITUTE_IMAGE, zeroSubstitutionImageFile);
+            InitImageSource(GUEST_SUBSTITUTE_IMAGE, zeroSubstitutionImageFile);
+            
+            BitmapImage mySource = new BitmapImage();
+       
+        }
+
+        private void InitImageSource(Image aImageSource, string aPath)
+        {
+            BitmapImage mySource = new BitmapImage();
+
+            mySource.BeginInit();
+            mySource.UriSource = new Uri(aPath);
+            mySource.EndInit();
+
+            aImageSource.Source = mySource;
+
+        }
 
         private void ScoreboardUpdate(ScoreboardResponse aResponse)
         {

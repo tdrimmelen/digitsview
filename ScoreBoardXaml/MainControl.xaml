@@ -1,6 +1,6 @@
 ﻿<UserControl  x:Class="ScoreboardV2Xaml.MainControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mtl="clr-namespace:vMixTitleLibrary;assembly=vMixTitleLibrary" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" Width="1920" Height="1080" Panel.ZIndex="500" InputMethod.IsInputMethodEnabled="True">
     <Grid InputMethod.IsInputMethodEnabled="True">
-        <Image x:Name="BGIMG" Source="Scoreboard15.png" Stretch="Fill"/>
+        <Image x:Name="BGIMG" Source="Images/Scoreboard.png" Stretch="Fill"/>
         <mtl:TextBlockDesign FontStyle="Normal" FontWeight="Black" FontFamily="Lato" Fill="#FFFFFFFF" FontSize="30" TextAlignment="Center" Text="35:00" x:Name="TIME" Width="106.85" Height="36" Margin="443.286323806475,79.875,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Visible" InputMethod.IsInputMethodEnabled="True" />
         <mtl:TextBlockDesign FontStyle="Normal" FontWeight="Black" FontFamily="Lato" Fill="#FFFFFFFF" FontSize="20" TextAlignment="Center" Text="1e helft" x:Name="GAMEPART_TITLE" Width="106.28962264151" Height="24" Margin="444.343384940669,124.509429931641,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Visible" InputMethod.IsInputMethodEnabled="True" />
         <mtl:TextBlockDesign FontStyle="Normal" FontWeight="Black" FontFamily="Lato" Fill="#FF000000" FontSize="30" TextAlignment="Right" Text="0" x:Name="HOMESCORE" Width="44.75" Height="36" Margin="230.449996948242,80.4749984741211,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Visible" InputMethod.IsInputMethodEnabled="True" />
@@ -8,7 +8,7 @@
         <mtl:TextBlockDesign FontStyle="Normal" FontWeight="Black" FontFamily="Lato" Fill="#FFFFFFFF" FontSize="30" TextAlignment="Center" Text="TOP" x:Name="HOMETEAM" Width="87.95" Height="36" Margin="135.550003051758,79.875,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Visible" InputMethod.IsInputMethodEnabled="True" />
         <mtl:TextBlockDesign FontStyle="Normal" FontWeight="Black" FontFamily="Lato" Fill="White" FontSize="30" TextAlignment="Center" Text="AWD" x:Name="GUESTTEAM" Width="87.95" Height="36" Margin="339.399993896484,80,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Visible" InputMethod.IsInputMethodEnabled="True" />
         <mtl:TextBlockDesign FontStyle="Normal" FontWeight="Black" FontFamily="Lato" Fill="#FFFFFFFF" FontSize="14" TextAlignment="Center" Text="WISSELS" x:Name="SUBSTITUTES" Width="97.623" Height="16.8" Margin="231.303,129.676,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Visible" InputMethod.IsInputMethodEnabled="True" />
-        <Image x:Name="HOME_SUBSTITUTE_IMAGE" HorizontalAlignment="Left" Margin="130.126,132.301,0,0" Stretch="Fill" VerticalAlignment="Top" Width="110" Height="12" RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="HOME_SUBSTITUTE_IMAGE" Source="Images/s0.png" HorizontalAlignment="Left" Margin="130.126,132.301,0,0" Stretch="Fill" VerticalAlignment="Top" Width="110" Height="12" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="1" ScaleX="-1"/>
@@ -18,7 +18,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="GUEST_SUBSTITUTE_IMAGE" HorizontalAlignment="Left" Margin="319.058,132.301,0,0" Stretch="Fill" VerticalAlignment="Top" Width="110" Height="12"/>
+        <Image x:Name="GUEST_SUBSTITUTE_IMAGE" Source="Images/s0.png" HorizontalAlignment="Left" Margin="319.058,132.301,0,0" Stretch="Fill" VerticalAlignment="Top" Width="110" Height="12"/>
         <mtl:TextBlockDesign FontStyle="Normal" FontWeight="Black" FontFamily="Lato" Fill="#FFFFFFFF" FontSize="30" TextAlignment="Center" Text="25" x:Name="SHOTCLOCK" Width="66.35" Height="36" Margin="557.286,79.875,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Visible" InputMethod.IsInputMethodEnabled="True" />
     </Grid>
 </UserControl>

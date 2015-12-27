@@ -343,6 +343,7 @@
 		<row><td>DigitsViewLib.Primary_output1</td><td>{2BCAAB66-47FF-404D-BAB4-4D504F41EAAB}</td><td>GlobalAssemblyCache</td><td>2</td><td/><td>digitsviewlib.primary_output1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{7DA72515-3973-46F0-A53C-B81875B88DF2}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{7F915D07-9F64-44CF-868F-6FC6C38D1050}</td><td>GlobalAssemblyCache</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ScoreboardXaml.Content_Files</td><td>{4E4E3E45-C7BE-460A-997A-924752B51D1A}</td><td>INSTALLDIR</td><td>2</td><td/><td>scoreboardxaml.content_files</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ScoreboardXaml.Primary_output</td><td>{16F94ECB-AD3C-4DD0-AE85-D4DDD0CA07D7}</td><td>INSTALLDIR</td><td>2</td><td/><td>scoreboardxaml.primary_outpu</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
@@ -1867,6 +1868,7 @@
 		<row><td>AlwaysInstall</td><td>DigitsViewLib.Primary_output1</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT1</td></row>
+		<row><td>AlwaysInstall</td><td>ScoreboardXaml.Content_Files</td></row>
 		<row><td>AlwaysInstall</td><td>ScoreboardXaml.Primary_output</td></row>
 	</table>
 
@@ -1884,7 +1886,7 @@
 		<col def="S72">ISComponentSubFolder_</col>
 		<row><td>digitsviewlib.primary_output1</td><td>DigitsViewLib.Primary_output1</td><td>DigitsViewLib.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;DigitsViewLib&gt;|Built</td><td>3</td><td/></row>
 		<row><td>scoreboard.config</td><td>ISX_DEFAULTCOMPONENT</td><td>SCOREB~1.CON|Scoreboard.config</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Visual Studio Projects\DigitsView\ScoreBoardXaml\Scoreboard.config</td><td>1</td><td/></row>
-		<row><td>scoreboard15.png</td><td>ISX_DEFAULTCOMPONENT</td><td>SCOREB~1.PNG|Scoreboard15.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Visual Studio Projects\DigitsView\ScoreBoardXaml\Scoreboard15.png</td><td>1</td><td/></row>
+		<row><td>scoreboardxaml.content_files</td><td>ScoreboardXaml.Content_Files</td><td>ScoreboardXaml.Content Files</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ScoreboardXaml&gt;|ContentFiles</td><td>3</td><td/></row>
 		<row><td>scoreboardxaml.primary_outpu</td><td>ScoreboardXaml.Primary_output</td><td>ScoreboardXaml.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ScoreboardXaml&gt;|Built</td><td>3</td><td/></row>
 	</table>
 
@@ -2032,6 +2034,7 @@
 		<row><td>DigitsViewLib.Primary_output1</td><td/><td/><td>_0AB3BC01_76F1_4482_A3E6_FEDF4E4B2227_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_8E42F046_4AD2_4989_817A_E846D773F8BF_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_917A3244_E519_4CA6_A63B_871E411B0954_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ScoreboardXaml.Content_Files</td><td/><td/><td>_7A358C7B_B890_42F8_9634_3D770F98596D_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ScoreboardXaml.Primary_output</td><td/><td/><td>_84406FFC_B930_4E42_A760_36D5015D1FF6_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
@@ -4375,7 +4378,7 @@ RABWAEQALQA1AAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>ProductCode</td><td>{228062B3-AE0D-4020-8F60-7AD385FA7AF3}</td><td/></row>
 		<row><td>ProductName</td><td>DigitsView</td><td/></row>
-		<row><td>ProductVersion</td><td>1.03.0000</td><td/></row>
+		<row><td>ProductVersion</td><td>1.04.0000</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>
