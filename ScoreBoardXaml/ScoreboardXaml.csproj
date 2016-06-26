@@ -61,7 +61,7 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="vMixTitleLibrary">
-      <HintPath>..\..\..\Program Files (x86)\vMix\vMixTitleLibrary.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\vMix\vMixTitleLibrary.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
